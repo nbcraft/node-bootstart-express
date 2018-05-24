@@ -1,0 +1,44 @@
+{
+  "name": "node-bootstart-express",
+  "version": "1.0.0",
+  "description": "Basic NodeJS Express web server to start new project",
+  "main": "app/server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "lodash": "^4.17.10",
+    "sinon": "^5.0.7",
+    "swaggerize-express": "^4.0.5",
+    "winston": "^3.0.0-rc5"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "mocha": "^5.1.1",
+    "nyc": "^11.8.0"
+  },
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "nyc --reporter=text mocha ./test/**",
+    "posttest": "./node_modules/eslint/bin/eslint.js --ignore-path .gitignore .",
+    "coverage": "nyc --reporter=text --reporter=html mocha ./test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nbcraft/node-bootstart-express.git"
+  },
+  "author": "https://github.com/nbcraft",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbcraft/node-bootstart-express/issues"
+  },
+  "homepage": "https://github.com/nbcraft/node-bootstart-express#readme"
+}
